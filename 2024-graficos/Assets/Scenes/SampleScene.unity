@@ -157,8 +157,12 @@ MonoBehaviour:
   left: 276
   up: 273
   down: 274
-  test: 0
-  rotation: {x: 0, y: 0, z: 0}
+  rotationLeft: 256
+  rotationRight: 257
+  colorChange: 114
+  newColor: {r: 1, g: 1, b: 1, a: 1}
+  spriteRenderer: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 10}
   speed: 1
 --- !u!212 &516128408
 SpriteRenderer:
@@ -353,8 +357,12 @@ MonoBehaviour:
   left: 97
   up: 119
   down: 115
-  test: 101
-  rotation: {x: 0, y: 0, z: 90}
+  rotationLeft: 101
+  rotationRight: 113
+  colorChange: 114
+  newColor: {r: 1, g: 1, b: 1, a: 1}
+  spriteRenderer: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 10}
   speed: 1
 --- !u!212 &1712319591
 SpriteRenderer:

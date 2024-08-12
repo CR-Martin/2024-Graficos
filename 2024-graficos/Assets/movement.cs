@@ -11,11 +11,21 @@ public class movement : MonoBehaviour
     [SerializeField] public KeyCode left = KeyCode.None;
     [SerializeField] public KeyCode up = KeyCode.None;
     [SerializeField] public KeyCode down = KeyCode.None;
-    [SerializeField] public KeyCode test = KeyCode.None;
+    [SerializeField] public KeyCode rotationLeft = KeyCode.None;
+    [SerializeField] public KeyCode rotationRight = KeyCode.None;
+    [SerializeField] public KeyCode colorChange = KeyCode.None;
+
+    public Color newColor;
+    public SpriteRenderer spriteRenderer;
 
     public Vector3 rotation;
     public float speed = 1;
-   
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color= newColor;
+    }
     void Update()
     {
 
@@ -41,9 +51,20 @@ public class movement : MonoBehaviour
         }
         transform.position = pos;
 
-        if (Input.GetKey(test))
+        if (Input.GetKeyDown(rotationLeft))
+        {
+            transform.Rotate(-rotation * Time.deltaTime);
+        }
+
+        if (Input.GetKeyDown(rotationRight))
         {
             transform.Rotate(rotation * Time.deltaTime);
+        }
+
+        if (Input.GetKeyUp(colorChange))
+        {
+            newColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            spriteRenderer.color = newColor;
         }
     }
 }
