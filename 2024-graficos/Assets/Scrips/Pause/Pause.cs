@@ -20,11 +20,9 @@ public class Pause : MonoBehaviour
             if (isPause == true)
             {
                 ResumeGameplay();
-                Debug.Log("isPause == true ");
 
             }
             else {
-                Debug.Log("isPause != true ");
 
                 PauseGameplay();
             }

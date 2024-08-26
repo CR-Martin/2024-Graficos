@@ -12,4 +12,13 @@ public class MainMenu : MonoBehaviour
         panel.SetActive(false);
 
     }
+
+    public void OnButtonExitClicked()
+    {
+        Application.Quit();
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
 }
