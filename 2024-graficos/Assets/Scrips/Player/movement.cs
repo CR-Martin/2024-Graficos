@@ -7,6 +7,7 @@ using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class movement : MonoBehaviour
 {
+    [SerializeField] string playerSpeed;
     [SerializeField] public KeyCode right = KeyCode.None;
     [SerializeField] public KeyCode left = KeyCode.None;
     [SerializeField] public KeyCode up = KeyCode.None;
@@ -19,15 +20,23 @@ public class movement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Vector3 rotation;
-    public float speed = 1;
+
+    private float speed;
 
     private void Start()
     {
+        speed = PlayerPrefs.GetFloat(playerSpeed);
+        Debug.Log(playerSpeed + "is :" + speed);
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color= newColor;
     }
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            speed = PlayerPrefs.GetFloat(playerSpeed);
+
+        }
 
         Vector3 pos = transform.position;
 

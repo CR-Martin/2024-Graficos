@@ -1446,17 +1446,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2736269e9d64984887f0cb1ca881882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: player2speed
   right: 0
   left: 0
-  up: 0
-  down: 0
+  up: 273
+  down: 274
   rotationLeft: 0
   rotationRight: 0
   colorChange: 114
   newColor: {r: 1, g: 1, b: 1, a: 1}
   spriteRenderer: {fileID: 0}
   rotation: {x: 0, y: 0, z: 10}
-  speed: 1
 --- !u!212 &516128408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2055,6 +2055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669940170}
   - component: {fileID: 669940171}
+  - component: {fileID: 669940172}
   m_Layer: 5
   m_Name: Player 1 Slider
   m_TagString: Untagged
@@ -2129,24 +2130,26 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1248910755}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &669940172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669940169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82888f579e0680f44bc6717a115e0979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: player1speed
+  mainSlider: {fileID: 669940171}
 --- !u!1 &770549938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,6 +3321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1340825720}
   - component: {fileID: 1340825721}
+  - component: {fileID: 1340825722}
   m_Layer: 5
   m_Name: Player 2 Slider
   m_TagString: Untagged
@@ -3392,24 +3396,26 @@ MonoBehaviour:
   m_HandleRect: {fileID: 772962857}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1340825722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340825719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82888f579e0680f44bc6717a115e0979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: player2speed
+  mainSlider: {fileID: 1340825721}
 --- !u!1 &1386766995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,6 +4149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2736269e9d64984887f0cb1ca881882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: player1speed
   right: 100
   left: 97
   up: 119
@@ -4153,7 +4160,6 @@ MonoBehaviour:
   newColor: {r: 1, g: 1, b: 1, a: 1}
   spriteRenderer: {fileID: 0}
   rotation: {x: 0, y: 0, z: 10}
-  speed: 1
 --- !u!212 &1712319591
 SpriteRenderer:
   m_ObjectHideFlags: 0
