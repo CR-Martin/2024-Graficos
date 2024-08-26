@@ -1089,12 +1089,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 611022754}
+      - m_Target: {fileID: 453253154}
         m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: ActivatePanel
+        m_MethodName: ResumeGameplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 611022754}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: DeactivatePanel
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 536095188}
+          m_ObjectArgument: {fileID: 1850503396}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1139,6 +1151,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440915944}
   m_CullTransparentMesh: 1
+--- !u!1 &453253153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453253155}
+  - component: {fileID: 453253154}
+  m_Layer: 0
+  m_Name: Pause Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &453253154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453253153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1786fa40c2a3204099de44e2d50f595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1850503396}
+--- !u!4 &453253155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453253153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 430.28345, y: 242.33818, z: 1659.0387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &470896776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1912,6 @@ GameObject:
   - component: {fileID: 639612569}
   - component: {fileID: 639612568}
   - component: {fileID: 639612567}
-  - component: {fileID: 639612566}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1883,18 +1939,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.000045776367}
   m_SizeDelta: {x: 160, y: 52.9079}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &639612566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639612564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75960933bb48aae49afc95e20d10007c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &639612567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,9 +1983,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 639612566}
-        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
-        m_MethodName: DeActivatePanel
+      - m_Target: {fileID: 611022754}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: DeactivatePanel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 770549938}
@@ -2715,7 +2759,6 @@ GameObject:
   - component: {fileID: 1122275265}
   - component: {fileID: 1122275264}
   - component: {fileID: 1122275263}
-  - component: {fileID: 1122275266}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -2787,9 +2830,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1122275266}
-        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
-        m_MethodName: DeActivatePanel
+      - m_Target: {fileID: 611022754}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: DeactivatePanel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 536095188}
@@ -2837,18 +2880,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122275261}
   m_CullTransparentMesh: 1
---- !u!114 &1122275266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122275261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75960933bb48aae49afc95e20d10007c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1200447090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4460,3 +4491,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1316174553}
   - {fileID: 1200447091}
+  - {fileID: 453253155}

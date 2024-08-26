@@ -6,4 +6,10 @@ public class MainMenu : MonoBehaviour
     {
         panel.SetActive(true);    
     }
+
+    public void DeactivatePanel(GameObject panel)
+    {
+        panel.SetActive(false);
+
+    }
 }
