@@ -11,7 +11,6 @@ public class MovementSlider : MonoBehaviour
     [SerializeField] TMP_Text text;
     void Awake()
     {
-        Debug.Log("Value in slider is : " + PlayerPrefs.GetFloat(player));
 
         mainSlider.value = PlayerPrefs.GetFloat(player);
         text.text = "player speed: " + PlayerPrefs.GetFloat(player).ToString();

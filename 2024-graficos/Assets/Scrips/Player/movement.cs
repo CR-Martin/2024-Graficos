@@ -8,8 +8,8 @@ using static System.Runtime.CompilerServices.RuntimeHelpers;
 public class movement : MonoBehaviour
 {
     [SerializeField] string playerSpeed;
-    [SerializeField] public KeyCode right = KeyCode.None;
-    [SerializeField] public KeyCode left = KeyCode.None;
+    //[SerializeField] public KeyCode right = KeyCode.None;
+    //[SerializeField] public KeyCode left = KeyCode.None;
     [SerializeField] public KeyCode up = KeyCode.None;
     [SerializeField] public KeyCode down = KeyCode.None;
     [SerializeField] public KeyCode rotationLeft = KeyCode.None;
@@ -26,7 +26,6 @@ public class movement : MonoBehaviour
     private void Start()
     {
         speed = PlayerPrefs.GetFloat(playerSpeed);
-        Debug.Log(playerSpeed + "is :" + speed);
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color= newColor;
     }
@@ -40,17 +39,7 @@ public class movement : MonoBehaviour
 
         Vector3 pos = transform.position;
 
-        if (Input.GetKey(right))
-        {
-            pos.x += speed * Time.deltaTime;
-
-        }
-        else if (Input.GetKey(left))
-        {
-            pos.x -= speed * Time.deltaTime;
-        }
-
-        else if (Input.GetKey(up))
+        if (Input.GetKey(up))
         {
             pos.y += speed * Time.deltaTime;
         }
@@ -58,6 +47,7 @@ public class movement : MonoBehaviour
         {
             pos.y -= speed * Time.deltaTime;
         }
+
         transform.position = pos;
 
         if (Input.GetKeyDown(rotationLeft))
@@ -75,5 +65,10 @@ public class movement : MonoBehaviour
             newColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
             spriteRenderer.color = newColor;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("It riggers");
     }
 }
